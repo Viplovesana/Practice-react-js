@@ -116,11 +116,15 @@
 
 ////...................................................................................
 
-//..........map method...............................
+
+
+
+
+//..........Map method...............................
 
 const Greet = ()=>{
 
-const Subject = ["HTM","css","jsvs.s","React","python"]
+const Subject = ["HTML","css","java.scipt","React","python"]
 
 const ans = Subject.map((key)=>{
 
