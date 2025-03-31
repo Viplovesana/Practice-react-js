@@ -83,38 +83,65 @@
 
 // function objects
 
-import Collage from "./Collage";
+// import Collage from "./Collage";
 
-const Student = {
-  name : "rgpv",
-  subject : 41,
-  fees : 45000
-}
-
-
-const App =()=>{
-  return(
-<>
-
-<h1 align="center">Welcome viplove!!</h1>
-<Collage
-
-nm={Student.name}
-sb={Student.subject}
-fs={Student.fees}
-
-/>
+// const Student = {
+//   name : "rgpv",
+//   subject : 41,
+//   fees : 45000
+// }
 
 
+// const App =()=>{
+//   return(
+// <>
 
-</>
+// <h1 align="center">Welcome viplove!!</h1>
+// <Collage
 
-  )
-}
-export default App;
+// nm={Student.name}
+// sb={Student.subject}
+// fs={Student.fees}
+
+// />
+
+
+
+// </>
+
+//   )
+// }
+// export default App;
 
 
 ////...................................................................................
 
+//..........map method...............................
+
+const Greet = ()=>{
+
+const Subject = ["HTM","css","jsvs.s","React","python"]
+
+const ans = Subject.map((key)=>{
+
+return(
+
+<option>{key}</option>
+
+)
+
+})
+
+return(
+    <>
+    
+   <h1 align="center">Welcome viplove!!</h1>
+   <select>{ans}</select>
+    
+    </>
+  )
+}
+export default Greet;
 
 
+//..........................................................................................
