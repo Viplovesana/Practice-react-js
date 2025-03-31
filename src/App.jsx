@@ -21,7 +21,7 @@
 // export default App;
 
 
-///..............props...................................
+///..............props.............................................................................
 
 // import Collage from "./Collage";
 
@@ -48,32 +48,73 @@
 
 
 
-// /....................................................................................
+// /......................................................................................................
 
 //we are passing the data with the help of props attribute
 
 
+// import Collage from "./Collage";
+
+// const name = "rgpv"
+// const seats =72838
+// const fees =78379
+
+// const App = ()=>{
+//   return(
+
+//     <>
+//      <h1 align="center">Welcome viplove!!</h1>
+//      <Collage
+
+//     nm={name}
+//     sts={seats}          
+//     fs={fees} 
+//      />
+    
+//     </>
+
+//   )
+// }
+// export default App;
+
+
+
+///...................................................................................................
+
+// function objects
+
 import Collage from "./Collage";
 
-const name = "rgpv"
-const seats =72838
-const fees =78379
+const Student = {
+  name : "rgpv",
+  subject : 41,
+  fees : 45000
+}
 
-const App = ()=>{
+
+const App =()=>{
   return(
+<>
 
-    <>
-     <h1 align="center">Welcome viplove!!</h1>
-     <Collage
+<h1 align="center">Welcome viplove!!</h1>
+<Collage
 
-    nm={name}
-    sts={seats}          
-    fs={fees} 
-     />
-    
-    </>
+nm={Student.name}
+sb={Student.subject}
+fs={Student.fees}
+
+/>
+
+
+
+</>
 
   )
 }
 export default App;
+
+
+////...................................................................................
+
+
 
