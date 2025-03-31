@@ -122,30 +122,121 @@
 
 //..........Map method...............................
 
-const Greet = ()=>{
+// const Greet = ()=>{
 
-const Subject = ["HTML","css","java.scipt","React","python"]
+// const Subject = ["HTML","css","java.scipt","React","python"]
 
-const ans = Subject.map((key)=>{
+// const ans = Subject.map((key)=>{
 
+// return(
+
+// <option>{key}</option>
+
+// )
+
+// })
+
+// return(
+//     <>
+    
+//    <h1 align="center">Welcome viplove!!</h1>
+//    <select>{ans}</select>
+    
+//     </>
+//   )
+// }
+// export default Greet;
+
+
+
+
+
+// const Drop =()=>{
+
+//   const Subject = ["HTML","CSS","javascript","python","React"]
+
+//   const ans = Subject.map((key)=>{
+//     return(
+//       <option>{key}</option>
+//     )
+//   })
+//     return(
+//     <>
+//     <h1 align="center">Welcome!!!!</h1>
+
+//     <select name="" id="">{ans}</select>
+    
+//     </>
+//   )
+// }
+// export default Drop;
+
+
+
+//..........................................................................................
+
+
+const Subject = [
+  {
+    "rollno":123,
+    "name":"viplove",
+    "city":"bhopal",
+    "fees":4500,
+  },
+  {
+    "rollno":127,
+    "name":"aryan",
+    "city":"dewas",
+    "fees":7780,
+  },
+  {
+    "rollno":125,
+    "name":"abheejet",
+    "city":"dewas",
+    "fees":4570,
+  },
+  {
+    "rollno":167,
+    "name":"kalpit",
+    "city":"kolkata",
+    "fees":4807,
+  },
+  {
+    "rollno":124,
+    "name":"jojo",
+    "city":"ujjain",
+    "fees":4700,
+  },
+]
+
+const ans =Subject.map((key)=>{
 return(
-
-<option>{key}</option>
-
+<tr>
+  <td>{key.rollno}</td>
+  <td>{key.name}</td>
+  <td>{key.city}</td>
+  <td>{key.fees}</td>
+</tr>
 )
-
 })
-
-return(
+const Data=()=>{
+  return(
     <>
     
-   <h1 align="center">Welcome viplove!!</h1>
-   <select>{ans}</select>
+    <h1 align="center">Welcome!!!!</h1>
+
+    <table border="2" width="500" height="400">
+      <tr>
+        <th>Rollno</th>
+        <th>Name</th>
+        <th>City</th>
+        <th>Fees</th>
+      </tr>
+      {ans}
+    </table>
+
     
     </>
   )
 }
-export default Greet;
-
-
-//..........................................................................................
+export default Data;
