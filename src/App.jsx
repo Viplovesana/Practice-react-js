@@ -247,40 +247,69 @@
 
 
 //.................................................................................................
-import EmpData from "./Empdata";
-import EmpDesign from "./EmpDesign";
-const Data = ()=>{
+// import EmpData from "./Empdata";
+// import EmpDesign from "./EmpDesign";
+// const Data = ()=>{
 
-const ans =EmpData.map((key)=><EmpDesign
+// const ans =EmpData.map((key)=><EmpDesign
 
-no={key.empno}
-nm={key.empname}
-ds={key.designation}
-sal={key.salary}
+// no={key.empno}
+// nm={key.empname}
+// ds={key.designation}
+// sal={key.salary}
 
 
 
-/>
+// />
   
-)
+// )
 
+//   return(
+//     <>
+//     <h1 align="center">Welcome!!!!</h1>
+
+//     <table border="2" width="600" >
+//       <tr>
+//         <th>Empnumber</th>
+//         <th>Empname</th>
+//         <th>designation</th>
+//         <th>salary</th>
+
+//       </tr>
+//       {ans}
+//     </table>
+    
+//     </>
+//   )
+// }
+
+// export default Data;
+
+
+
+///......................................................................................
+
+
+import { BrowserRouter,Routes,Route } from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Layout from "./Layout";
+
+const Data =()=>{
   return(
     <>
-    <h1 align="center">Welcome!!!!</h1>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Layout/>}>
+      <Route path="home" element={<Home/>}/>
+      <Route path="about" element={<About/>}/>
+      <Route path="Contact" element={<Contact/>}/>
 
-    <table border="2" width="600" >
-      <tr>
-        <th>Empnumber</th>
-        <th>Empname</th>
-        <th>designation</th>
-        <th>salary</th>
-
-      </tr>
-      {ans}
-    </table>
-    
+      </Route>
+    </Routes>
+    </BrowserRouter>
     </>
-  )
-}
-
+  );
+};
 export default Data;
