@@ -1,0 +1,33 @@
+const EmpData =[
+    {
+        "empno":34536,
+        "empname":"GUGUbj",
+        "designation":"manager",
+        "salary":878844,
+    },
+    {
+        "empno":348939,
+        "empname":"GUGUbj",
+        "designation":"manager",
+        "salary":878844,
+    },
+    {
+        "empno":34536,
+        "empname":"GUGUbj",
+        "designation":"manager",
+        "salary":878844,
+    },
+    {
+        "empno":34536,
+        "empname":"GUGUbj",
+        "designation":"manager",
+        "salary":878844,
+    },
+    {
+        "empno":34536,
+        "empname":"GUGUbj",
+        "designation":"manager",
+        "salary":878844,
+    },
+]
+export default EmpData;

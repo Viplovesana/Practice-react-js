@@ -6,6 +6,8 @@
 // import Component2 from "./Component2";
 // import Component3 from "./Component3";
 
+// import EmpData from "./Empdata";
+
 
 // const App=()=>{
 //   return(
@@ -176,67 +178,109 @@
 //..........................................................................................
 
 
-const Subject = [
-  {
-    "rollno":123,
-    "name":"viplove",
-    "city":"bhopal",
-    "fees":4500,
-  },
-  {
-    "rollno":127,
-    "name":"aryan",
-    "city":"dewas",
-    "fees":7780,
-  },
-  {
-    "rollno":125,
-    "name":"abheejet",
-    "city":"dewas",
-    "fees":4570,
-  },
-  {
-    "rollno":167,
-    "name":"kalpit",
-    "city":"kolkata",
-    "fees":4807,
-  },
-  {
-    "rollno":124,
-    "name":"jojo",
-    "city":"ujjain",
-    "fees":4700,
-  },
-]
+// const Subject = [
+//   {
+//     "rollno":123,
+//     "name":"viplove",
+//     "city":"bhopal",
+//     "fees":4500,
+//   },
+//   {
+//     "rollno":127,
+//     "name":"aryan",
+//     "city":"dewas",
+//     "fees":7780,
+//   },
+//   {
+//     "rollno":125,
+//     "name":"abheejet",
+//     "city":"dewas",
+//     "fees":4570,
+//   },
+//   {
+//     "rollno":167,
+//     "name":"kalpit",
+//     "city":"kolkata",
+//     "fees":4807,
+//   },
+//   {
+//     "rollno":124,
+//     "name":"jojo",
+//     "city":"ujjain",
+//     "fees":4700,
+//   },
+// ]
 
-const ans =Subject.map((key)=>{
-return(
-<tr>
-  <td>{key.rollno}</td>
-  <td>{key.name}</td>
-  <td>{key.city}</td>
-  <td>{key.fees}</td>
-</tr>
+// const ans =Subject.map((key)=>{
+// return(
+// <tr>
+//   <td>{key.rollno}</td>
+//   <td>{key.name}</td>
+//   <td>{key.city}</td>
+//   <td>{key.fees}</td>
+// </tr>
+// )
+// })
+// const Data=()=>{
+//   return(
+//     <>
+    
+//     <h1 align="center">Welcome!!!!</h1>
+
+//     <table border="2" width="500" height="400">
+//       <tr>
+//         <th>Rollno</th>
+//         <th>Name</th>
+//         <th>City</th>
+//         <th>Fees</th>
+//       </tr>
+//       {ans}
+//     </table>
+
+    
+//     </>
+//   )
+// }
+// export default Data;
+
+
+
+
+//.................................................................................................
+import EmpData from "./Empdata";
+import EmpDesign from "./EmpDesign";
+const Data = ()=>{
+
+const ans =EmpData.map((key)=><EmpDesign
+
+no={key.empno}
+nm={key.empname}
+ds={key.designation}
+sal={key.salary}
+
+
+
+/>
+  
 )
-})
-const Data=()=>{
+
   return(
     <>
-    
     <h1 align="center">Welcome!!!!</h1>
 
-    <table border="2" width="500" height="400">
+    <table border="2" width="600" >
       <tr>
-        <th>Rollno</th>
-        <th>Name</th>
-        <th>City</th>
-        <th>Fees</th>
+        <th>Empnumber</th>
+        <th>Empname</th>
+        <th>designation</th>
+        <th>salary</th>
+
       </tr>
       {ans}
     </table>
-
     
     </>
   )
 }
+
 export default Data;
