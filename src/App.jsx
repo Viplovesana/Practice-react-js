@@ -290,21 +290,54 @@
 ///......................................................................................
 
 
-import { BrowserRouter,Routes,Route } from "react-router-dom";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import Layout from "./Layout";
+// import { BrowserRouter,Routes,Route } from "react-router-dom";
+// import Home from "./pages/Home";
+// import About from "./pages/About";
+// import Contact from "./pages/Contact";
+// import Layout from "./Layout";
 
-const Data =()=>{
+// const Data =()=>{
+//   return(
+//     <>
+//     <BrowserRouter>
+//     <Routes>
+//       <Route path="/" element={<Layout/>}>
+//       <Route path="home" element={<Home/>}/>
+//       <Route path="about" element={<About/>}/>
+//       <Route path="Contact" element={<Contact/>}/>
+
+//       </Route>
+//     </Routes>
+//     </BrowserRouter>
+//     </>
+//   );
+// };
+// export default Data;
+
+
+//..............................................................................................
+
+import { BrowserRouter,Routes,Route } from "react-router-dom";
+import Layout from "./Layout";
+import Company from "./Company";
+import Contact from "./Contact";
+import Nofound from "./Nofound";
+import Product from "./Product";
+import Home from "./Home";
+
+
+
+const App=()=>{
   return(
     <>
     <BrowserRouter>
     <Routes>
       <Route path="/" element={<Layout/>}>
       <Route path="home" element={<Home/>}/>
-      <Route path="about" element={<About/>}/>
-      <Route path="Contact" element={<Contact/>}/>
+      <Route path="contact" element={<Contact/>}/>
+      <Route path="product" element={<Product/>}/>
+      <Route path="company" element={<Company/>}/>
+      <Route path="nofound" element={<Nofound/>}/>
 
       </Route>
     </Routes>
@@ -312,4 +345,4 @@ const Data =()=>{
     </>
   );
 };
-export default Data;
+export default App;
