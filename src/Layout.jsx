@@ -9,7 +9,7 @@ const Layout=()=>{
             <Link to="product">Product</Link>
             <Link to="contact">Contact</Link>
             <Link to="company">Company</Link>
-            <Link to="nofound">Nofound</Link>
+           
             <hr size="4" color="red"/>
         </nav>
 

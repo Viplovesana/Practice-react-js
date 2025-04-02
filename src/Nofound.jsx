@@ -5,7 +5,7 @@
 const Nofound=()=>{
     return(
         <>
-        <h1>no found</h1>
+        <h1>error : found error 404</h1>
         </>
     );
     

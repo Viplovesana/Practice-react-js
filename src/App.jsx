@@ -333,11 +333,12 @@ const App=()=>{
     <BrowserRouter>
     <Routes>
       <Route path="/" element={<Layout/>}>
+      <Route index element={<Home/>}/>
       <Route path="home" element={<Home/>}/>
       <Route path="contact" element={<Contact/>}/>
       <Route path="product" element={<Product/>}/>
       <Route path="company" element={<Company/>}/>
-      <Route path="nofound" element={<Nofound/>}/>
+      <Route path="*" element={<Nofound/>}/>
 
       </Route>
     </Routes>
