@@ -348,122 +348,70 @@
 // };
 // export default App;
 
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
 
 
-import Carousel from 'react-bootstrap/Carousel';
-import img1 from "./images/img1.jpeg"
-import img2 from "./images/img4.jpeg"
-import img3 from "./images/img3.jpeg"
+// const App=()=>{
 
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
+//   const Myname=(nm)=>{
+//     alert(`my name is ${nm}`)
+//   }
+//   }
+//   return(
+//     <>
+//     <h1>welcome!!</h1>
 
-import my1 from "./images/t1.jpeg"
-import my2 from "./images/t2.jpeg"
-import my3 from "./images/t3.jpeg"
-import my4 from "./images/t4.jpeg"
+//     <button onclick={()=>{Myname("viplove")}}>click here</button>
+//     </>
+//   )
 
-const App = ()=>{
+
+// export default App;
+
+
+// const App=()=>{
+
+//   const Display=(e)=>{
+//     alert("Name: " + nm+ " btnName : " + e.target.name+" value :"+e.target.value);
+
+//   }
+ 
+
+//   return(
+//     <>
+//     <button name="myBTN" value="btn0" onClick={(e)=>{Display("neeraj",e)}}>clik here</button>
+//     </>
+//   )
+// }
+// export default App;
+
+
+// const Data=()=>{
+
+// const display=()=>{
+//   alert("this is react js");
+// }
+
+//   return(
+//     <>
+//    <button onClick={display}>click here</button>
+//     </>
+//   );
+// };
+// export default Data;
+
+
+
+const App=()=>{
+
+  const display=()=>{
+    alert("this is my react js")
+  }
+
   return(
-      <>
-   
-      <h1 className="data">Welcome to cybrom</h1>
-      <Navbar bg="primary" data-bs-theme="dark">
-        <Container>
-          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
-          </Nav>
-        </Container>
-      </Navbar>
 
-
-      <Carousel>
-      <Carousel.Item>
-        <img src={img1}  / >
-        <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-      <img src={img2} />
-        <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-      <img src={img3} />
-        <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
-
-
-    <div>
-    <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={my4} />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
-
-    <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={my3} />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
-
-    <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={my2} />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
-
-    <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={my1} />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
-
-
-    </div>
-  
-      
-      </>
+    <>
+    <button onClick={display}>clik here</button>
+    </>
   )
 }
 export default App;
