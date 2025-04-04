@@ -401,16 +401,32 @@
 
 
 
-const App=()=>{
+// const App=()=>{
 
-  const display=()=>{
-    alert("this is my react js")
-  }
+//   const display=()=>{
+//     alert("this is my react js")
+//   }
+
+//   return(
+
+//     <>
+//     <button onClick={display}>clik here</button>
+//     </>
+//   )
+// }
+// export default App;
+
+
+const App=()=>{
+const myshow=(nm)=>{
+  alert(`my name is ${nm}`);
+ 
+  
+}
 
   return(
-
     <>
-    <button onClick={display}>clik here</button>
+   <button onClick={()=>{myshow("viplove")}}>click here</button>
     </>
   )
 }
