@@ -417,17 +417,115 @@
 // export default App;
 
 
-const App=()=>{
-const myshow=(nm)=>{
-  alert(`my name is ${nm}`);
+// const App=()=>{
+// const myshow=(nm)=>{
+//   alert(`my name is ${nm}`);
  
   
-}
+// }
 
+//   return(
+//     <>
+//    <button onClick={()=>{myshow("viplove")}}>click here</button>
+//     </>
+//   )
+// }
+// export default App;
+
+//.....................................................................................................
+
+// const App=()=>{
+//   const myshow=(nm,age,e)=>{
+//     alert("Name: "+ nm + " "+ "Type: " + e.type + " "+ "Age: "+ age + "Name: "+" "+ e.target.name + " "+ "Value: "+ e.target.value);
+   
+    
+//   }
+  
+//     return(
+//       <>
+//      <button name="myBTN" value="btn0" onClick={(e)=>{myshow("viplove",22,e)}}>click here</button>
+//       </>
+//     )
+//   }
+//   export default App;
+
+
+
+
+import { useState } from "react";
+
+const App=()=>{
+
+  const [color,SetColor]= useState("red")
   return(
     <>
-   <button onClick={()=>{myshow("viplove")}}>click here</button>
+    <h1 style={{color:color}} >Welcome!!! :{color}</h1>
+    <button onClick={()=>{SetColor("green")}}>green color</button>
+    <button onClick={()=>{SetColor("yellow")}}>yellow color</button>
+    <button onClick={()=>{SetColor("blue")}}>blue color</button>
+   
     </>
   )
 }
 export default App;
+
+
+
+
+
+// import { useState } from "react";
+
+
+// import Button from 'react-bootstrap/Button';
+
+// const App=()=>{
+
+//   const [cnt,SetCnt]= useState("0")
+
+// const myInc=()=>{
+
+//   SetCnt(cnt +1 );
+
+
+// }
+
+// const myDec=()=>{
+
+//   if(cnt<1)
+//   {
+//     alert("count not less then 1")
+//   }
+//   else{
+//     SetCnt( cnt-1);
+//   }
+
+
+
+
+// }
+
+//   return(
+//     <>
+
+
+//     <div className="mycount">
+
+
+//     <h1 >Welcome!!! </h1>
+
+//     <Button variant="primary" onClick={myInc}>Increament</Button>
+
+//     <h1>count : {cnt}</h1>
+
+//     <Button variant="primary" onClick={myDec}>Decreament</Button>
+
+//     <Button variant="danger" onClick={()=>{SetCnt(0)}}>Reset</Button>
+
+
+//     </div>
+    
+   
+//     </>
+//   )
+// }
+// export default App;
