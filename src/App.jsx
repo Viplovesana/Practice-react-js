@@ -452,22 +452,22 @@
 
 
 
-import { useState } from "react";
+// import { useState } from "react";
 
-const App=()=>{
+// const App=()=>{
 
-  const [color,SetColor]= useState("red")
-  return(
-    <>
-    <h1 style={{color:color}} >Welcome!!! :{color}</h1>
-    <button onClick={()=>{SetColor("green")}}>green color</button>
-    <button onClick={()=>{SetColor("yellow")}}>yellow color</button>
-    <button onClick={()=>{SetColor("blue")}}>blue color</button>
+//   const [color,SetColor]= useState("red")
+//   return(
+//     <>
+//     <h1 style={{color:color}} >Welcome!!! :{color}</h1>
+//     <button onClick={()=>{SetColor("green")}}>green color</button>
+//     <button onClick={()=>{SetColor("yellow")}}>yellow color</button>
+//     <button onClick={()=>{SetColor("blue")}}>blue color</button>
    
-    </>
-  )
-}
-export default App;
+//     </>
+//   )
+// }
+// export default App;
 
 
 
@@ -480,7 +480,7 @@ export default App;
 
 // const App=()=>{
 
-//   const [cnt,SetCnt]= useState("0")
+//   const [cnt,SetCnt]= useState(0)
 
 // const myInc=()=>{
 
@@ -529,3 +529,52 @@ export default App;
 //   )
 // }
 // export default App;
+
+//..................................................................................................
+
+
+import { useState } from "react";
+
+import Button from 'react-bootstrap/Button';
+
+
+
+const State=()=>{
+  const [cnt,SetCnt]=useState(0);
+
+  const myInc=()=>{
+    SetCnt(cnt+1);
+
+  }
+  const myDec=()=>{
+    if(cnt<1)
+
+      {
+      alert("count not less than 1")
+    }
+
+    else
+    {
+      SetCnt(cnt-1);
+    }
+
+  }
+  return(
+    <>
+    <div className="count">
+
+      <h1>Welcome!!!</h1>
+
+      <Button variant="primary" onClick={myInc}>Increament</Button>
+
+      <h1>Count :{cnt}</h1>
+
+      <Button variant="primary" onClick={myDec}>Decreament</Button>
+
+      <Button variant="danger" onClick={()=>{SetCnt(0)}}>Reset</Button>
+
+    </div>
+    </>
+  )
+}
+export default State;
