@@ -665,31 +665,61 @@
 
 
 //..........******useeffect count handling.....................**************>>>>>>>>>>>>>>>>>>>>>>
-import { useState,useEffect } from "react";
+// import { useState,useEffect } from "react";
 
-const App = ()=>{
+// const App = ()=>{
 
-const[count,setCount]=useState(0)
+// const[count,setCount]=useState(0)
 
-useEffect(()=>{
-    setTimeout(() => {
-        setCount(count+1)
-    },2000);
+// useEffect(()=>{
+//     setTimeout(() => {
+//         setCount(count+1)
+//     },2000);
    
  
-})
+// })
 
+//     return(
+
+//         <>
+//         <h1>Hello , Welcome!!!! {count}</h1>
+//         </>
+//     );
+// };
+// export default App;
+
+
+
+// const App =()=>{
+//     return(
+//         <>
+//         <h1>Wecome!!!{}</h1>
+//         </>
+//     )
+// };
+// export default App;
+
+//.........................................multiple render.............................................#
+
+import { useState,useEffect } from "react";
+const App =()=>{
+    const[count,setCount]=useState(0)
+    const[multi,setMulti]=useState(0)
+    useEffect(()=>{                       //............doubt......................
+        setMulti(count*2)
+    },[count])
+
+
+  
     return(
-
         <>
-        <h1>Hello , Welcome!!!! {count}</h1>
+        <h1>Count one : {count}</h1>
+        <h1>Count two : {multi}</h1>
+        <button onClick={()=>{setCount(count+1)}}>click</button>
         </>
-    );
+    )
 };
 export default App;
-
-
-
 
 
 
