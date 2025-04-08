@@ -6,6 +6,7 @@
 // import Component2 from "./Component2";
 // import Component3 from "./Component3";
 
+
 // import EmpData from "./Empdata";
 
 
@@ -533,48 +534,151 @@
 //..................................................................................................
 
 
+// import { useState } from "react";
+
+// import Button from 'react-bootstrap/Button';
+
+
+
+// const State=()=>{
+//   const [cnt,SetCnt]=useState(0);
+
+//   const myInc=()=>{
+//     SetCnt(cnt+1);
+
+//   }
+//   const myDec=()=>{
+//     if(cnt<1)
+
+//       {
+//       alert("count not less than 1")
+//     }
+
+//     else
+//     {    
+//       SetCnt(cnt-1);
+//     }
+
+//   }
+//   return(
+//     <>
+//     <div className="count">
+
+//       <h1>Welcome!!!</h1>
+
+//       <Button variant="primary" onClick={myInc}>Increament</Button>
+
+//       <h1>Count :{cnt}</h1>
+
+//       <Button variant="primary" onClick={myDec}>Decreament</Button>
+
+//       <Button variant="danger" onClick={()=>{SetCnt(0)}}>Reset</Button>
+
+//     </div>
+//     </>
+//   )
+// }
+// export default State;
+
+
+// ...........................................................................
+
+// <------******* NO DEPENDENCY PASSED IMP:=>  RUNS ON EVERY RENDER  ********----->
+// import { useState,useEffect } from "react";
+// const App = () => {
+//   const [count, setCount] = useState(0);
+//   useEffect(() => {
+//     setTimeout(() => {
+//       setCount(count + 1);
+//     }, 3000);
+//   });
+//   return (
+//     <div>
+//       <h1>hook example{count}</h1>
+//     </div>
+//   );
+// };
+// export default App;
+
+// <------******* AN EMPTY ARRAY IMP:=> RUNS ONLY ON THE FIRST RENDER  ********----->
+
+// import { useState, useEffect } from "react";
+
+// const App = () => {
+//   const [ count,setCount] = useState  (0);
+//   useEffect(() => {
+//     setTimeout(() => {
+//       setCount(count + 1);
+//     }, 5000);
+//   }, []);
+//   return <div>
+//     <h1>hook {count}</h1>
+//   </div>;
+// };
+// export default App;
+
+//............................................................................
+
+
+// import { useState,useEffect } from "react";
+
+// const App=()=>{
+
+
+//   const [count,setCount] =useState(0);
+//   const [multi,setMulti] =useState(0);
+
+// useEffect(()=>{
+
+//   setMulti(count*2)
+
+// },[count])
+           
+//   return(
+//     <>
+    
+//     <h1>Count :  {count}</h1>
+
+//     <h1>My count :  {multi}</h1>
+
+//     <button onClick={()=>{setCount(count+1)}}> click me</button>
+    
+//     </>
+//   )
+// }
+// export default App;     
+///..............................................................................
+
+//....***increament counts using usetate***..........................
+
+
 import { useState } from "react";
+const App=()=>{
 
-import Button from 'react-bootstrap/Button';
-
-
-
-const State=()=>{
-  const [cnt,SetCnt]=useState(0);
+  const[count,setCount]=useState(0)
 
   const myInc=()=>{
-    SetCnt(cnt+1);
-
+    setCount(count+1)
   }
-  const myDec=()=>{
-    if(cnt<1)
 
-      {
-      alert("count not less than 1")
-    }
 
-    else
-    {
-      SetCnt(cnt-1);
-    }
 
-  }
   return(
     <>
-    <div className="count">
+    
+    <h1>useEffect Hook!!!{count}</h1>
 
-      <h1>Welcome!!!</h1>
-
-      <Button variant="primary" onClick={myInc}>Increament</Button>
-
-      <h1>Count :{cnt}</h1>
-
-      <Button variant="primary" onClick={myDec}>Decreament</Button>
-
-      <Button variant="danger" onClick={()=>{SetCnt(0)}}>Reset</Button>
-
-    </div>
+    <button onClick={myInc}>click</button>
+    
     </>
-  )
-}
-export default State;
+  );
+};
+export default App;
+
+
+
+
+
+
+
+

@@ -3,10 +3,10 @@
 
 
 .count{
-    width: 400px;
+    width: 500px;
     background-color: bisque;
     margin: auto;
     border-radius: 10px;
-    padding: 30px;
+    padding: 40px;
     border: 2px solid vblack;
 }
