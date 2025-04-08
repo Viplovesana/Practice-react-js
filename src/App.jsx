@@ -633,34 +633,59 @@
 //......***lets creat counter App **............////
 
 
-import { useState } from "react";
-import Button from 'react-bootstrap/Button';
+// import { useState } from "react";
+// import Button from 'react-bootstrap/Button';
 
-const App=()=>{
-const[count,setCount]=useState(0)
-const myInc=()=>{
-  setCount(count+1)
-}
-const myDec=()=>{
-  if(count<1){
-    alert(' count not less then zero')
-  }
-  else
-  {setCount(count-1)}
+// const App=()=>{
+// const[count,setCount]=useState(0)
+// const myInc=()=>{
+//   setCount(count+1)
+// }
+// const myDec=()=>{
+//   if(count<1){
+//     alert(' count not less then zero')
+//   }
+//   else
+//   {setCount(count-1)}
   
-}
-  return (
-    <>
+// }
+//   return (
+//     <>
 
-    <h1>Counter App</h1>
-    <Button variant="primary" onClick={myInc}>Primary</Button>
-    <h1>Count :{count}</h1>
-    <Button variant="primary" onClick={myDec}>Primary</Button>
-    <Button variant="danger" onClick={()=>{setCount(0)}}>Reset</Button>
+//     <h1>Counter App</h1>
+//     <Button variant="primary" onClick={myInc}>Primary</Button>
+//     <h1>Count :{count}</h1>
+//     <Button variant="primary" onClick={myDec}>Primary</Button>
+//     <Button variant="danger" onClick={()=>{setCount(0)}}>Reset</Button>
     
-    </>
-  )
-}
+//     </>
+//   )
+// }
+// export default App;
+
+
+//..........******useeffect count handling.....................**************>>>>>>>>>>>>>>>>>>>>>>
+import { useState,useEffect } from "react";
+
+const App = ()=>{
+
+const[count,setCount]=useState(0)
+
+useEffect(()=>{
+    setTimeout(() => {
+        setCount(count+1)
+    },2000);
+   
+ 
+})
+
+    return(
+
+        <>
+        <h1>Hello , Welcome!!!! {count}</h1>
+        </>
+    );
+};
 export default App;
 
 
