@@ -453,83 +453,10 @@
 
 
 
-// import { useState } from "react";
-
-// const App=()=>{
-
-//   const [color,SetColor]= useState("red")
-//   return(
-//     <>
-//     <h1 style={{color:color}} >Welcome!!! :{color}</h1>
-//     <button onClick={()=>{SetColor("green")}}>green color</button>
-//     <button onClick={()=>{SetColor("yellow")}}>yellow color</button>
-//     <button onClick={()=>{SetColor("blue")}}>blue color</button>
-   
-//     </>
-//   )
-// }
-// export default App;
 
 
 
 
-
-// import { useState } from "react";
-
-
-// import Button from 'react-bootstrap/Button';
-
-// const App=()=>{
-
-//   const [cnt,SetCnt]= useState(0)
-
-// const myInc=()=>{
-
-//   SetCnt(cnt +1 );
-
-
-// }
-
-// const myDec=()=>{
-
-//   if(cnt<1)
-//   {
-//     alert("count not less then 1")
-//   }
-//   else{
-//     SetCnt( cnt-1);
-//   }
-
-
-
-
-// }
-
-//   return(
-//     <>
-
-
-//     <div className="mycount">
-
-
-//     <h1 >Welcome!!! </h1>
-
-//     <Button variant="primary" onClick={myInc}>Increament</Button>
-
-//     <h1>count : {cnt}</h1>
-
-//     <Button variant="primary" onClick={myDec}>Decreament</Button>
-
-//     <Button variant="danger" onClick={()=>{SetCnt(0)}}>Reset</Button>
-
-
-//     </div>
-    
-   
-//     </>
-//   )
-// }
-// export default App;
 
 //..................................................................................................
 
@@ -679,31 +606,62 @@
 
 //....................****lets change the color of the text by using usestae**..........
 
-import { useState } from "react";
+// import { useState } from "react";
 
 
 
-const Usestate=()=>{
+// const Usestate=()=>{
 
-  const[color,SetColor]=useState("red")
+//   const[color,SetColor]=useState("red")
 
-  return(
-    <>
+//   return(
+//     <>
     
-    <h1 style={{color:color}}>welcome to the useState!!!!{color} </h1>
-    <button onClick={()=>{SetColor("green")}}>change 1</button>
-    <button onClick={()=>{SetColor("blue")}}>change 2</button>
-    <button onClick={()=>{SetColor("brown")}}>change 3</button>
-    <button onClick={()=>{SetColor("orange")}}>change 4</button>
+//     <h1 style={{color:color}}>welcome to the useState!!!!{color} </h1>
+//     <button onClick={()=>{SetColor("green")}}>change 1</button>
+//     <button onClick={()=>{SetColor("blue")}}>change 2</button>
+//     <button onClick={()=>{SetColor("brown")}}>change 3</button>
+//     <button onClick={()=>{SetColor("orange")}}>change 4</button>
+    
+//     </>
+//   )
+// };
+
+// export default Usestate;
+
+
+//......***lets creat counter App **............////
+
+
+import { useState } from "react";
+import Button from 'react-bootstrap/Button';
+
+const App=()=>{
+const[count,setCount]=useState(0)
+const myInc=()=>{
+  setCount(count+1)
+}
+const myDec=()=>{
+  if(count<1){
+    alert(' count not less then zero')
+  }
+  else
+  {setCount(count-1)}
+  
+}
+  return (
+    <>
+
+    <h1>Counter App</h1>
+    <Button variant="primary" onClick={myInc}>Primary</Button>
+    <h1>Count :{count}</h1>
+    <Button variant="primary" onClick={myDec}>Primary</Button>
+    <Button variant="danger" onClick={()=>{setCount(0)}}>Reset</Button>
     
     </>
   )
-};
-
-export default Usestate;
-
-
-
+}
+export default App;
 
 
 
