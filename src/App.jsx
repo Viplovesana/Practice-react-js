@@ -717,6 +717,30 @@
 
 
 
+
+
+// import { useState,useEffect } from "react";
+// const App =()=>{
+// const[count,setCount]=useState(0)
+
+// useEffect(()=>{
+//    setTimeout(()=>{
+//     setCount(count+1)
+//    },1000)
+
+// },[]);
+
+//     return(
+//         <>
+//         <h1>Wecome!!!{count}</h1>
+        
+//         </>
+//     )
+// };
+// export default App;
+
+
+
 // const App =()=>{
 //     return(
 //         <>
@@ -727,28 +751,30 @@
 // export default App;
 
 
-import { useState,useEffect } from "react";
+import { useState } from "react";
 const App =()=>{
-const[count,setCount]=useState(0)
+    const[name,setName]=useState("")
+    const[city,setCity]=useState("")
 
-useEffect(()=>{
-   setTimeout(()=>{
-    setCount(count+1)
-   },1000)
+    const handlesubmit=()=>{
+        alert(`My name : ${name} My city :${city}`);
 
-},[]);
-
+    }
     return(
         <>
-        <h1>Wecome!!!{count}</h1>
-        
+        <h1>Aplication Form!!!</h1>
+        Enter name : <input type="text" value={name}
+        onChange={(e)=>{setName(e.target.value)}} />
+        <br />
+        Enter city : <input type="text" value={city}
+         onChange={(e)=>{setCity(e.target.value)}} />
+        <br />
+        <button onClick={handlesubmit}>save!!!</button>
+
         </>
     )
 };
 export default App;
-
-
-
 
 
 
