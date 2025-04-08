@@ -652,28 +652,60 @@
 //....***increament counts using usetate***..........................
 
 
+// import { useState } from "react";
+// const App=()=>{
+
+//   const[count,setCount]=useState(0)
+
+//   const myInc=()=>{
+//     setCount(count+1)
+//   }
+
+
+
+//   return(
+//     <>
+    
+//     <h1>useEffect Hook!!!{count}</h1>
+
+//     <button onClick={myInc}>click</button>
+    
+//     </>
+//   );
+// };
+// export default App;
+
+
+
+//....................****lets change the color of the text by using usestae**..........
+
 import { useState } from "react";
-const App=()=>{
-
-  const[count,setCount]=useState(0)
-
-  const myInc=()=>{
-    setCount(count+1)
-  }
 
 
+
+const Usestate=()=>{
+
+  const[color,SetColor]=useState("red")
 
   return(
     <>
     
-    <h1>useEffect Hook!!!{count}</h1>
-
-    <button onClick={myInc}>click</button>
+    <h1 style={{color:color}}>welcome to the useState!!!!{color} </h1>
+    <button onClick={()=>{SetColor("green")}}>change 1</button>
+    <button onClick={()=>{SetColor("blue")}}>change 2</button>
+    <button onClick={()=>{SetColor("brown")}}>change 3</button>
+    <button onClick={()=>{SetColor("orange")}}>change 4</button>
     
     </>
-  );
+  )
 };
-export default App;
+
+export default Usestate;
+
+
+
+
+
 
 
 
