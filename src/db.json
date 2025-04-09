@@ -1,0 +1,21 @@
+{
+  "Student": [
+    {
+      "id": "9898",
+      "roll no": "234",
+      "name": "viplove",
+      "city": "bhopal",
+      "fees": 2000
+    },
+    {
+      "id": "a2ee"
+    },
+    {
+      "id": "9934",
+      "roll no": "roll no",
+      "name": "name",
+      "city": "city",
+      "fees": "fees"
+    }
+  ]
+}

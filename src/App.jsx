@@ -741,40 +741,115 @@
 
 
 
+
+
+///..............................................................aplication form...................................//
+
+
+// import { useState } from "react";
 // const App =()=>{
+//     const[name,setName]=useState("")
+//     const[city,setCity]=useState("")
+
+//     const handlesubmit=()=>{
+//         alert(`My name : ${name} My city :${city}`);
+
+//     }
 //     return(
 //         <>
-//         <h1>Wecome!!!{}</h1>
+//         <h1>Aplication Form!!!</h1>
+//         Enter name : <input type="text" value={name}
+//         onChange={(e)=>{setName(e.target.value)}} />
+//         <br />
+//         Enter city : <input type="text" value={city}
+//          onChange={(e)=>{setCity(e.target.value)}} />
+//         <br />
+//         <button onClick={handlesubmit}>save!!!</button>
+
 //         </>
 //     )
 // };
 // export default App;
 
+//.............................................................................................
+
+
+
+// import { useState } from "react";
+// import axios from "axios";
+
+// const App =()=>{
+//     const[input,setInput]=useState({});
+//     const handleinput=(e)=>{
+//         let name=e.target.name;
+//         let value=e.target.name;
+//         setInput(values=>({...values,[name]:value}));
+//         console.log(input);
+    
+      
+
+         
+//     }
+//     const handleSubmit=async()=> {
+//         let api="http://localhost:3000/Student";
+//         const response = await axios.post(api,input);
+//         console.log(response);
+//         alert("data indert successfully")
+//       }
+
+//     return(
+//         <>
+//         <h1>application form</h1>
+//         roll no : <input type="text" name="roll no" onChange={handleinput} />
+//         <br />
+//         name : <input type="text"  name="name"  onChange={handleinput} />
+//         <br />
+//         city : <input type="text"  name="city"  onChange={handleinput} />
+//         <br />
+//         fees : <input type="text"  name="fees"  onChange={handleinput} />
+//         <br />
+//         <button onClick={handleSubmit}>save!!!</button>
+        
+//         </>
+//     )             
+// };
+// export default App;
+
+//....................................................................................................
+
+
 
 import { useState } from "react";
+
 const App =()=>{
     const[name,setName]=useState("")
     const[city,setCity]=useState("")
-
+    const[rollno,setRollno]=useState("")
     const handlesubmit=()=>{
-        alert(`My name : ${name} My city :${city}`);
-
+        alert(`My name is ${name}: My roll no is ${rollno}: My city is ${city}`)
+        console.log({name},{city},{rollno})
     }
+
+
+
     return(
         <>
-        <h1>Aplication Form!!!</h1>
-        Enter name : <input type="text" value={name}
-        onChange={(e)=>{setName(e.target.value)}} />
+        <h1>Application Form!!!</h1>
         <br />
-        Enter city : <input type="text" value={city}
-         onChange={(e)=>{setCity(e.target.value)}} />
+        Enter Name : <input type="text"  value={name} onChange={(e)=>{setName(e.target.value)}}/>
         <br />
-        <button onClick={handlesubmit}>save!!!</button>
-
+        Enter City : <input type="text" value={city} onChange={(e)=>{setCity(e.target.value)}}/>
+        <br />
+        Enter Roll No : <input type="text" value={rollno} onChange={(e)=>(setRollno(e.target.value))}/>
+        <br />
+        <button onClick={handlesubmit}>Click!!</button>
+        
         </>
     )
-};
+}
 export default App;
+
+
 
 
 
