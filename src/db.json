@@ -1,21 +1,12 @@
 {
-  "Student": [
+  "Employe": [
+  
     {
-      "id": "9898",
-      "roll no": "234",
-      "name": "viplove",
+      "id": "7923",
+      "empno": "420",
+      "name": "viplove sana",
       "city": "bhopal",
-      "fees": 2000
-    },
-    {
-      "id": "a2ee"
-    },
-    {
-      "id": "9934",
-      "roll no": "roll no",
-      "name": "name",
-      "city": "city",
-      "fees": "fees"
+      "salary": "60000"
     }
   ]
 }

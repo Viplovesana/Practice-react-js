@@ -747,31 +747,34 @@
 
 
 // import { useState } from "react";
+
 // const App =()=>{
 //     const[name,setName]=useState("")
 //     const[city,setCity]=useState("")
-
+//     const[rollno,setRollno]=useState("")
 //     const handlesubmit=()=>{
-//         alert(`My name : ${name} My city :${city}`);
-
+//         alert(`My name is ${name}: My roll no is ${rollno}: My city is ${city}`)
+//         console.log({name},{city},{rollno})
 //     }
+
+
+
 //     return(
 //         <>
-//         <h1>Aplication Form!!!</h1>
-//         Enter name : <input type="text" value={name}
-//         onChange={(e)=>{setName(e.target.value)}} />
+//         <h1>Application Form!!!</h1>
 //         <br />
-//         Enter city : <input type="text" value={city}
-//          onChange={(e)=>{setCity(e.target.value)}} />
+//         Enter Name : <input type="text"  value={name} onChange={(e)=>{setName(e.target.value)}}/>
 //         <br />
-//         <button onClick={handlesubmit}>save!!!</button>
-
+//         Enter City : <input type="text" value={city} onChange={(e)=>{setCity(e.target.value)}}/>
+//         <br />
+//         Enter Roll No : <input type="text" value={rollno} onChange={(e)=>(setRollno(e.target.value))}/>
+//         <br />
+//         <button onClick={handlesubmit}>Click!!</button>
+        
 //         </>
 //     )
-// };
+// }
 // export default App;
-
-//.............................................................................................
 
 
 
@@ -782,7 +785,7 @@
 //     const[input,setInput]=useState({});
 //     const handleinput=(e)=>{
 //         let name=e.target.name;
-//         let value=e.target.name;
+//         let value=e.target.value;
 //         setInput(values=>({...values,[name]:value}));
 //         console.log(input);
     
@@ -794,7 +797,7 @@
 //         let api="http://localhost:3000/Student";
 //         const response = await axios.post(api,input);
 //         console.log(response);
-//         alert("data indert successfully")
+//         alert("data inserted successfully")                    
 //       }
 
 //     return(
@@ -816,34 +819,58 @@
 // export default App;
 
 //....................................................................................................
+// import { useState } from "react"
 
 
+// const App =()=>{
+//     const[input,setInput]=useState({});
+//     const handleinput=(e)=>{
+//         let name=e.target.name;
+//         let value=e.target.value;
+//         setInput(values=>({...values,[name]:value}));
+//         console.log(input);
+//     }
+//     return(
+//         <>
+//         <h1>Form Handle Application</h1>
+//         <br />
+//         Enter roll no : <input type="text" name="rollno" onChange={handleinput}/>
+//         <br />
+//         Enter name : <input type="text" name="name"  onChange={handleinput}/>
+//         <br />
+//         Enter city : <input type="text" name="city"  onChange={handleinput}/>
+//         <br />
+//         Enter fees : <input type="text" name="fees"  onChange={handleinput}/>
+//         <br />
+//         <button >submit</button>
+//         </>
+//     )
+// }
+// export default App;
 
-import { useState } from "react";
 
-const App =()=>{
-    const[name,setName]=useState("")
-    const[city,setCity]=useState("")
-    const[rollno,setRollno]=useState("")
-    const handlesubmit=()=>{
-        alert(`My name is ${name}: My roll no is ${rollno}: My city is ${city}`)
-        console.log({name},{city},{rollno})
-    }
+import { BrowserRouter,Routes,Route, } from "react-router-dom";
+import Layout from "./Layout";
+import Home from "./Home";
+import Insert from "./insert";
+import Display from "./Display";
 
-
-
+const App=()=>{
     return(
         <>
-        <h1>Application Form!!!</h1>
-        <br />
-        Enter Name : <input type="text"  value={name} onChange={(e)=>{setName(e.target.value)}}/>
-        <br />
-        Enter City : <input type="text" value={city} onChange={(e)=>{setCity(e.target.value)}}/>
-        <br />
-        Enter Roll No : <input type="text" value={rollno} onChange={(e)=>(setRollno(e.target.value))}/>
-        <br />
-        <button onClick={handlesubmit}>Click!!</button>
-        
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/" element={<Layout/>}>
+                    <Route index element={<Home/>}/>
+                    <Route path="home" element={<Home/>}/>
+                    <Route path="insert" element={<Insert/>}/>
+                    <Route path="display" element={<Display/>}/>
+
+                    </Route>
+                </Routes>
+            </BrowserRouter>
+             
+
         </>
     )
 }
