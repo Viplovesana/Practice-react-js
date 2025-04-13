@@ -4,6 +4,7 @@
     height: 100px;
     background-color: antiquewhite;
 }
+
 .nav{
     height: 90px;
 }
@@ -22,4 +23,9 @@
     margin: auto;
     margin-top: 30px;
     padding: 60px;
+}
+
+.delicon{
+    font-size: 25px;
+    color: rgb(255, 50, 50);
 }

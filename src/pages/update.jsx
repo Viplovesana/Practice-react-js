@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import Table from 'react-bootstrap/Table';
 import { ToastContainer, toast } from 'react-toastify';
+import { MdDelete } from "react-icons/md";
 
 
 
@@ -17,11 +18,12 @@ const Update=()=>{
     useEffect(()=>{
         loadData();
     },[]);
-    const myDel=async()=>{
-        let api="http://localhost:3000/Employe"
+    const myDel=async(id)=>{
+        let api=`http://localhost:3000/Employe/${id}`;
         const response=await axios.delete(api)
         console.log(response);
-        toast.warning("your Data succesfully deleted!!!")
+        toast.error("your Data succesfully deleted!!!")
+        loadData();
 
 
         
@@ -39,7 +41,7 @@ const Update=()=>{
           <td>{key.name}</td>
           <td>{key.designation}</td>
           <td>{key.salary}</td>
-          <td><i class="fa fa-trash" aria-hidden="true"></i></td>
+          <td><MdDelete  className="delicon"  onClick={()=>{myDel(key.id)}} /></td>
         </tr>
             </>
         )
@@ -47,16 +49,18 @@ const Update=()=>{
     })
     return(
         <>
-        <h1>Welcome to the Update page</h1>
+        <h1 align="center">Welcome to the Update page</h1>
         <hr />
         <Table striped bordered hover>
       <thead>
         <tr>
+            
             <th>S No:-</th>
           <th>Emp Number</th>
           <th>Emp Name</th>
           <th>Designation</th>
           <th>Salary</th>
+          <th>Delete</th>
         </tr>
       </thead>
       <tbody>

@@ -1,33 +1,6 @@
 {
   "Employe": [
     {
-      "id": "12",
-      "empno": "123",
-      "name": "viplove",
-      "designation": "manager",
-      "salary": "234565"
-    },
-    {
-      "id": "8977",
-      "empno": "458",
-      "name": "viplove sana",
-      "designation": "manager",
-      "salary": "60000"
-    },
-    {
-      "id": "9961",
-      "empno": "9876",
-      "name": "ananya",
-      "designation": "manager",
-      "salary": "30000"
-    },
-    {
-      "id": "f4e2",
-      "empno": "9876",
-      "name": "faraz ahmed",
-      "designation": "manager"
-    },
-    {
       "id": "5fff",
       "empno": "9876",
       "name": "faraz ahmed",
@@ -50,13 +23,6 @@
     },
     {
       "id": "fe87",
-      "empno": "'5678.@'",
-      "name": "FGUGHH JNKJN",
-      "designation": "team Leader",
-      "salary": "450000"
-    },
-    {
-      "id": "25e5",
       "empno": "'5678.@'",
       "name": "FGUGHH JNKJN",
       "designation": "team Leader",

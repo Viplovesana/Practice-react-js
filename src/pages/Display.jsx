@@ -39,7 +39,7 @@ const Display=()=>{
 
     return(
         <>
-        <h1>Welcome to Display page</h1>
+        <h1 align="center">Welcome to Display page</h1>
         <hr />
         <Table striped bordered hover>
       <thead>

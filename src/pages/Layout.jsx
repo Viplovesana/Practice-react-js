@@ -26,7 +26,7 @@ const Layout=()=>{
 
         <div className="foot">
         <footer align="center">
-            WWW.MYcompany.com
+            <h5>WWW.Mycompany.com</h5>
         </footer>
         </div>
 
