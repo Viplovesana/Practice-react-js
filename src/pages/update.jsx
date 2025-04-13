@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Table from 'react-bootstrap/Table';
+import { ToastContainer, toast } from 'react-toastify';
 
 
 
@@ -16,6 +17,15 @@ const Update=()=>{
     useEffect(()=>{
         loadData();
     },[]);
+    const myDel=async()=>{
+        let api="http://localhost:3000/Employe"
+        const response=await axios.delete(api)
+        console.log(response);
+        toast.warning("your Data succesfully deleted!!!")
+
+
+        
+    }
 
 
     let sno=0
@@ -29,6 +39,7 @@ const Update=()=>{
           <td>{key.name}</td>
           <td>{key.designation}</td>
           <td>{key.salary}</td>
+          <td><i class="fa fa-trash" aria-hidden="true"></i></td>
         </tr>
             </>
         )
@@ -52,6 +63,7 @@ const Update=()=>{
       {ans}
       </tbody>
     </Table>
+    <ToastContainer/>
         </>
     );
     
