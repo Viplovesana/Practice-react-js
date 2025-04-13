@@ -22,7 +22,7 @@ const Search=()=>{
                 <h2>Employee Number : {key.empno}</h2>
                 <h2>Designation : {key.designation}</h2>
                 <h2>salary : {key.salary}</h2>
-                <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia modi, voluptates, rerum soluta fuga iusto, totam nemo deleniti </h3>
+                <h3>Mr/Miss:-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia modi, voluptates, rerum soluta fuga iusto, totam nemo deleniti </h3>
 
 
             
