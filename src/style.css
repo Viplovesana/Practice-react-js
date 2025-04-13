@@ -1,0 +1,14 @@
+
+.foot{
+    width: 100%;
+    height: 100px;
+    background-color: antiquewhite;
+}
+.nav{
+    height: 90px;
+}
+
+.format{
+    width: 50%;
+    margin: auto;
+}
