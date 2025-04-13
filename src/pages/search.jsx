@@ -18,7 +18,7 @@ const Search=()=>{
         return(
             <>
            
-                <h1>Welcome {key.name}</h1>
+                <h1>Welcome :-{key.name}</h1>
                 <h2>Employee Number : {key.empno}</h2>
                 <h2>Designation : {key.designation}</h2>
                 <h2>salary : {key.salary}</h2>
