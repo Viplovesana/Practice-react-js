@@ -47,6 +47,8 @@ const [user,setUser]=useState("viplove!")
     return(
         <>
         <h1>welcome!!!  {user}</h1>
+        <button onClick={()=>{setUser("Ananya")}}>Click Here!!</button>
+        <button onClick={()=>{setUser("viplove")}}>Click Here!!</button>
         <mycontext.Provider value={{user}}>
         <Comp1 />
         </mycontext.Provider>
