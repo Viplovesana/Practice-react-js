@@ -1,20 +1,6 @@
 {
   "Employe": [
     {
-      "id": "5fff",
-      "empno": "9876",
-      "name": "faraz ahmed",
-      "designation": "manager",
-      "salary": "60000"
-    },
-    {
-      "id": "2d43",
-      "empno": "455667",
-      "name": "parul sana",
-      "designation": "mother",
-      "salary": "enfinite"
-    },
-    {
       "id": "f057",
       "empno": "5458",
       "name": "FGUGHH JNKJN",
@@ -22,11 +8,32 @@
       "salary": "450000"
     },
     {
-      "id": "fe87",
-      "empno": "'5678.@'",
-      "name": "FGUGHH JNKJN",
+      "id": "2c73",
+      "empno": "7842",
+      "name": "rohan malakar",
+      "designation": "coordinator",
+      "salary": "60000"
+    },
+    {
+      "id": "a936",
+      "empno": "7554",
+      "name": "ananya sahu",
       "designation": "team Leader",
       "salary": "450000"
+    },
+    {
+      "id": "fb9b",
+      "empno": "9876",
+      "name": "faraz ahmed",
+      "designation": "manager",
+      "salary": "60000"
+    },
+    {
+      "id": "22ee",
+      "empno": "9876",
+      "name": "viplove sana",
+      "designation": "team Leader",
+      "salary": "60000"
     }
   ]
 }

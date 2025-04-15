@@ -3,12 +3,19 @@ import { useEffect, useState } from "react";
 import Table from 'react-bootstrap/Table';
 import { ToastContainer, toast } from 'react-toastify';
 import { MdDelete } from "react-icons/md";
+import { FaEdit } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 
 
 
 const Update=()=>{
     const[mydata,setMydata]=useState([]);
+
+    const navigate= useNavigate();
+
+
+
     const loadData=async()=>{
         let api="http://localhost:3000/Employe";
         const response=await axios.get(api);
@@ -23,10 +30,11 @@ const Update=()=>{
         const response=await axios.delete(api)
         console.log(response);
         toast.error("your Data succesfully deleted!!!")
-        loadData();
+        loadData();    
+    }
 
-
-        
+    const myEdit=(id)=>{
+        navigate(`/myedit/${id}`)
     }
 
 
@@ -42,6 +50,7 @@ const Update=()=>{
           <td>{key.designation}</td>
           <td>{key.salary}</td>
           <td><MdDelete  className="delicon"  onClick={()=>{myDel(key.id)}} /></td>
+          <td><FaEdit className="editicon"  onClick={()=>{myEdit(key.id)}}/></td>
         </tr>
             </>
         )
@@ -61,6 +70,7 @@ const Update=()=>{
           <th>Designation</th>
           <th>Salary</th>
           <th>Delete</th>
+          <th>Edit</th>
         </tr>
       </thead>
       <tbody>

@@ -7,6 +7,7 @@ import Display from "./pages/Display";
 import Contact from "./pages/contact";
 import Update  from "./pages/update";
 import Search from "./pages/search";
+import MyEdit from "./pages/MyEdit";
 
 const App=()=>{
     return(
@@ -21,6 +22,7 @@ const App=()=>{
             <Route path="/display" element={<Display/>}/>
             <Route path="/search" element={<Search/>}/>
             <Route path="/update" element={<Update/>}/>
+            <Route path="/myedit/:id" element={<MyEdit/>}/>
             <Route path="/contact" element={<Contact/>}/>
             
 
@@ -34,6 +36,22 @@ const App=()=>{
 };
 export default App;
 
+
+
+// import { useState } from "react";
+// import Comp1 from "./comp1";
+// const App=()=>{
+// const [user,setUser]=useState("viplove")
+
+//     return(
+//         <>
+//         <h1>welcome!!!  {user}</h1>
+//         <Comp1 />
+        
+//         </>
+//     )
+// }
+// export default App;
 
 
 

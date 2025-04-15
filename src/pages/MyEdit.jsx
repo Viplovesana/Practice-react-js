@@ -3,12 +3,12 @@
 import { useParams } from "react-router-dom";
  import { useState, useEffect } from "react";
  import { ToastContainer, toast } from 'react-toastify';
- import axios from "axios";
+ import axios from "axios";    
  const MyEdit=()=>{
    const {id} = useParams();
     const [mydata, setMydata]=useState({});
     const loadData=async()=>{
-     let api=`http://localhost:3000/employee/${id}`;
+     let api=`http://localhost:3000/Employe/${id}`;
      const resposne = await axios.get(api);
      console.log(resposne.data);
      setMydata(resposne.data);
@@ -20,15 +20,16 @@ import { useParams } from "react-router-dom";
  
     const handleInput=(e)=>{
       let name=e.target.name;
-      let value=e.target.value;
+      let value= e.target.value;
        setMydata(values=>({...values, [name]:value}));
        console.log(mydata);
     }
     
     const handleSubmit=async()=>{
-     let api=`http://localhost:3000/employee/${id}`;
+     let api=`http://localhost:3000/Employe/${id}`;
      const response = await axios.put(api, mydata);
-     toast.warning("Data succesfully Updated!", {
+     
+    toast.warning("Data succesfully Updated!", {
          position: "top-left"
        });
     }
@@ -54,4 +55,4 @@ import { useParams } from "react-router-dom";
      )
  }
  
- export default MyEdit;
+ export default MyEdit;  
