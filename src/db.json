@@ -1,13 +1,6 @@
 {
   "Employe": [
     {
-      "id": "f057",
-      "empno": "5458",
-      "name": "FGUGHH JNKJN",
-      "designation": "team Leader",
-      "salary": "450000"
-    },
-    {
       "id": "2c73",
       "empno": "7842",
       "name": "rohan malakar",
@@ -32,6 +25,13 @@
       "id": "22ee",
       "empno": "9876",
       "name": "viplove sana",
+      "designation": "team Leader",
+      "salary": "60000"
+    },
+    {
+      "id": "20ce",
+      "empno": "4532",
+      "name": "piyush yadav",
       "designation": "team Leader",
       "salary": "60000"
     }
