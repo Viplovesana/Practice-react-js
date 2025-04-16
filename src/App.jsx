@@ -38,27 +38,45 @@
 
 
 
-import { useState ,createContext} from "react";
-import Comp1 from "./comp1";
-const mycontext=createContext();
-const App=()=>{
-const [user,setUser]=useState("viplove!")
+// import { useState ,createContext} from "react";
+// import Comp1 from "./comp1";
+// const mycontext=createContext();
+// const App=()=>{
+// const [user,setUser]=useState("viplove!")
 
-    return(
-        <>
-        <h1>welcome!!!  {user}</h1>
-        <button onClick={()=>{setUser("Ananya")}}>Click Here!!</button>
-        <button onClick={()=>{setUser("viplove")}}>Click Here!!</button>
-        <mycontext.Provider value={{user}}>
-        <Comp1 />
-        </mycontext.Provider>
+//     return(
+//         <>
+//         <h1>welcome!!!  {user}</h1>
+//         <button onClick={()=>{setUser("Ananya")}}>Click Here!!</button>
+//         <button onClick={()=>{setUser("viplove")}}>Click Here!!</button>
+//         <mycontext.Provider value={{user,setUser}}>
+//         <Comp1 />
+//         </mycontext.Provider>
        
         
-        </>
-    )
+//         </>
+//     )
+// }
+// export default App;
+// export {mycontext} ;     
+
+
+import Bhopal from "./bhopal";
+
+
+const App =()=>{
+ 
+return(           
+    <>
+    <h1>Welcome!!!</h1>
+    <Bhopal/>
+   
+  
+    </>
+)
 }
 export default App;
-export {mycontext}                               
+         
  
 
 

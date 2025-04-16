@@ -4,11 +4,13 @@ import { useContext } from "react";
 
 
 const Comp5=()=>{
-    const {user}=useContext(mycontext)
+    const {user,setUser}=useContext(mycontext);
     return(
         <>
         <h1>component 5!</h1>
         <h1>welcome!!!! {user}</h1>
+        <button onClick={()=>{setUser("faraz")}}>Click Here!!</button>
+     
         </>
     )
 }
