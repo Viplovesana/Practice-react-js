@@ -5,7 +5,7 @@ const mycontext=createContext();
 
 
 const Usercontext =({children})=>{
-    const [name,setName]=useState("viplove");
+    const [name,setName]=useState("viplove !!");
  
     return(           
         <>

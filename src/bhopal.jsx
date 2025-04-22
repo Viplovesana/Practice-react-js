@@ -1,7 +1,7 @@
 
 import { mycontext } from "./usercontext";
 import { useContext } from "react";
-const Bhopal =({children})=>{
+const Bhopal =()=>{     
     const{name}=useContext(mycontext)
    
     return(           

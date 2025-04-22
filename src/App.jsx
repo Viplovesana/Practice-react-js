@@ -61,23 +61,195 @@
 // export {mycontext} ;     
 
 
-import Bhopal from "./bhopal";
+// import Bhopal from "./bhopal";
 
 
-const App =()=>{
+
+
+// const App =()=>{
  
-return(           
-    <>
-    <h1>Welcome!!!</h1>
-    <Bhopal/>
+// return(           
+//     <>
+//     <h1>Welcome!!!</h1>
+//     <Bhopal/>
    
   
-    </>
-)
-}
-export default App;
-         
+//     </>
+// )
+// }
+// export default App;
+
+
+// import AuthApp from "./AuthApp";
+// import Unauthapp from "./UnAuthApp";
+// import { useState } from "react";     
+// import { myContext } from "./Logincontext"; 
+
+
+// const App =()=>{
+//     const{user}=useState(myContext)
  
+// return(           
+//     <>
+//     <h1>Login page !!</h1>
+//     {user.auth ? <AuthApp/> : <Unauthapp/>}
+   
+  
+//     </>
+// )
+// }
+// export default App;
+
+
+
+
+
+
+
+
+
+
+
+//   import { useState,useRef, useEffect } from "react";               
+ 
+//  const App=()=>{
+//     const [name,setName]=useState("");
+//     const cntRef=useRef(0)
+//     console.log(cntRef)
+//     useEffect(()=>{
+//     cntRef.current=cntRef.current+1
+//     })
+  
+
+
+//     return(
+//         <>
+        
+//         enter your name : <input type="text" value={name}  onChange={(e)=>{setName(e.target.value)}}/>
+//         <h1>my render count! {cntRef.current}</h1>
+//         </>
+//     )
+//  }
+//  export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+//  import { useRef } from "react";               
+ 
+//  const App=()=>{
+//     const myRef=useRef("")
+//     const btn1=()=>{
+//         myRef.current.style.color="red"
+//     }
+       
+    
+//      const btn2=()=>{
+
+//           myRef.current.style.width="450px"
+//             myRef.current.style.height="300px            "
+//             myRef.current.style.border="2px,solid ,black"
+
+
+
+
+//      }  
+     
+//      const btn3=()=>{
+
+//      }
+
+    
+//     return(
+//         <>
+        
+//         <button onClick={btn1}>click here</button>
+//         <button onClick={btn2}>click here</button>
+//          <button onClick={btn3}>click here</button>
+//         <div ref={myRef}>
+//             welcome to cybrom bhopal mp
+//         </div>
+//         </>
+//     )
+//  }
+//  export default App;
+
+
+
+
+// import { useReducer } from "react"
+
+// const App=()=>{
+//     const reducerMethod=(state,action)=>{
+//         switch(action)
+//         {
+//             case"increament":
+//             return state+1;
+//             case"decreament":
+//             return state-1;
+//             default:
+//                 return state
+//         }
+
+//     }
+//     constb[Count, dispatch]=useReducer(reducerMethod,0);
+//     return(
+//         <>
+//         <button onClick={()={dispatch("increament")}}>increament</button>
+//         <h1>count : {count} </h1>
+//         <button onClick={()={dispatch("decreament")}}>decreament</button>
+//         </>
+//     )
+// }
+// export default App;
+
+
+//   
+
+import { useRef } from "react";
+
+const App =()=>{
+    const inputRef=useRef("");
+    const btn1=()=>{
+
+        inputRef.current.innerHTML="Welcome to the practice session "
+        inputRef.current.style.width="500px"
+        inputRef.current.style.height="100px"
+        inputRef.current.style.border="3px,solid,black"
+        inputRef.current.style.borderRadius="20px"
+        inputRef.current.style.backgroundColor="red"
+
+    }
+    const btn2=()=>{
+          inputRef.current.style.backgroundColor="green"
+        
+    }
+    const btn3=()=>{
+         inputRef.current.style.backgroundColor="yellow"
+        
+    }
+    return(
+        <>
+       <div ref={inputRef}>login system !</div>
+        <button onClick={btn1}>click 1</button>
+        <button onClick={btn2}>click 2</button>
+        <button onClick={btn3}>click 3</button>
+        </>
+    )
+};
+export default App;
+
+
+
+
 
 
 

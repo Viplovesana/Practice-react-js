@@ -34,6 +34,13 @@
       "name": "piyush yadav",
       "designation": "team Leader",
       "salary": "60000"
+    },
+    {
+      "id": "80a5",
+      "empno": "8907",
+      "name": "Avichal Shastri",
+      "designation": "manager",
+      "salary": "450000"
     }
   ]
 }
