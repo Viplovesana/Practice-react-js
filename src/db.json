@@ -41,6 +41,13 @@
       "name": "Avichal Shastri",
       "designation": "manager",
       "salary": "450000"
+    },
+    {
+      "id": "7618",
+      "empno": "4200",
+      "name": "faraz ahmed",
+      "designation": "manager",
+      "salary": "30000"
     }
   ]
 }

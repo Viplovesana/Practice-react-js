@@ -24,7 +24,7 @@ const Insert=()=>{
     return(
         <>
 
-<div className='format      '>
+<div className='format'>
 <Form>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Enter Empno:</Form.Label>
