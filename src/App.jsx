@@ -9,6 +9,8 @@
 // import Search from "./pages/search";
 // import MyEdit from "./pages/MyEdit";
 
+
+
 // import Cybrom from "./cybrom";
 
 // const App=()=>{
@@ -304,12 +306,15 @@
 // }
 // export default App;
 
-
+import Subject from "./subject";
 const App=()=>{
     return(
         <>
-        <h1>Welcome to Cybrom!!</h1>
-      
+        
+       <div style={{backgroundColor:"red",height:"200"}}>
+       <h1>Welcome to Cybrom!!</h1>
+       <Subject/>
+       </div>
         
         
         </>
