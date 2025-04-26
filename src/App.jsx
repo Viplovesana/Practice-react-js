@@ -9,6 +9,8 @@
 // import Search from "./pages/search";
 // import MyEdit from "./pages/MyEdit";
 
+// import Cybrom from "./cybrom";
+
 // const App=()=>{
 //     return(
 //         <>
@@ -272,31 +274,44 @@
 // }
 // export default App;
 
-import { useState,useMemo } from "react";
+// import { useState,useMemo } from "react";
 
+// const App=()=>{
+//     const [mynum,setMynum]=useState("");
+//     const [name,setName]=useState("");
+
+//     // const myagevalue=useMemo(mymulti,[mynum])
+
+
+
+
+//     // function mymulti(){
+//     //     for(var i=0; i<10000000000; i++){}
+//     //     return mynum*2
+//     // }
+    
+    
+
+//     return(
+//         <>
+
+//         enter number : <input type="number" value={mynum}  onChange={(e)=>{setMynum(e.target.value)}}/>
+//         enter name : <input type="text" value={name} onChange={(e)=>{setName(e.target.value)}} />
+//         {/* <h1>my age multiply by 2 is : {mymulti}</h1> */}
+        
+//         </>
+//     )
+// }
+// export default App;
+
+import Cybrom from "./cybrom";
 const App=()=>{
-    const [mynum,setMynum]=useState("");
-    const [name,setName]=useState("");
-
-
-
-
-    function mymulti(){
-        for(var i=0; i<10000000000; i++){}
-        return mynum*2
-    }
-    
-    
-
     return(
         <>
-
-        enter number : <input type="number" value={mynum}  onChange={(e)=>{setMynum(e.target.value)}}/>
-        enter name : <input type="text" value={name} onChange={(e)=>{setName(e.target.value)}} />
-        <h1>my multiplication {mymulti()}</h1>
+        <h1>Welcome to Cybrom!!</h1>
+        <Cybrom/>
         
         </>
     )
 }
 export default App;
-

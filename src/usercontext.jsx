@@ -1,22 +1,24 @@
-
-import { useState,createContext } from "react";
-
-const mycontext=createContext();
+import { createContext ,useState} from "react";
 
 
-const Usercontext =({children})=>{
-    const [name,setName]=useState("viplove !!");
- 
-    return(           
+
+const myuserContext=createContext();
+
+const Usercontext=({children})=>{
+    const[input,setInput]=useState("viplove")
+
+    return(
         <>
+
+    <myuserContext.Provider value={{input,setInput}}>
+        {children}
+
+    </myuserContext.Provider>
         
-        <mycontext.Provider value={{name}}>
-            {children}
-        </mycontext.Provider>
-       
-      
+        
         </>
     )
-    }
-    export default Usercontext;
-    export {mycontext};
+}
+export default Usercontext ;
+
+export {myuserContext};
