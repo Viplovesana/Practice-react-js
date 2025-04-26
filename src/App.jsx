@@ -304,12 +304,13 @@
 // }
 // export default App;
 
-import Cybrom from "./cybrom";
+
 const App=()=>{
     return(
         <>
         <h1>Welcome to Cybrom!!</h1>
-        <Cybrom/>
+      
+        
         
         </>
     )
