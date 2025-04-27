@@ -9,6 +9,8 @@
 // import Search from "./pages/search";
 // import MyEdit from "./pages/MyEdit";
 
+import Student from "./student";
+
 
 
 // import Cybrom from "./cybrom";
@@ -306,15 +308,11 @@
 // }
 // export default App;
 
-import Subject from "./subject";
 const App=()=>{
     return(
         <>
-        
-       <div style={{backgroundColor:"red",height:"200"}}>
-       <h1>Welcome to Cybrom!!</h1>
-       <Subject/>
-       </div>
+        <h1>Welcome !</h1>
+        <Student/>
         
         
         </>
