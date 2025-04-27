@@ -9,7 +9,8 @@
 // import Search from "./pages/search";
 // import MyEdit from "./pages/MyEdit";
 
-import Student from "./student";
+
+
 
 
 
@@ -308,11 +309,12 @@ import Student from "./student";
 // }
 // export default App;
 
+import Color from "./color";
 const App=()=>{
     return(
         <>
         <h1>Welcome !</h1>
-        <Student/>
+        <Color/>
         
         
         </>

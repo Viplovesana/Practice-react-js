@@ -1,17 +1,16 @@
-
 import { createContext,useState } from "react";
-const mycontext=createContext()
-
+const mycolor=createContext();
 const Usercontext=({children})=>{
-    const [user,setUser]=useState("viplove")
+  const[color,setColor]=useState("green")
   return(
     <>
-    <mycontext.Provider value={{user,setUser}}>
-        {children}
-    </mycontext.Provider>
-  
+    <mycolor.Provider value={{color,setColor}}>
+      {children}
+
+    </mycolor.Provider>
+    
     </>
   )
-}
+};
 export default Usercontext;
-export{mycontext};
+export{mycolor};
