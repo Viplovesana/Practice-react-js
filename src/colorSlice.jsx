@@ -6,11 +6,12 @@ const colorSlice=createSlice({
 
     name:"mycolor",
     initialState:{
-        color:"red"
+        color:"pink"
     },
     reducers:{
-    changeColor:(state)=>{
-        state.color="green"
+    changeColor:(state,actions)=>{
+        console.log(actions.payload);
+        state.color=actions.payload
     }}
 })
 

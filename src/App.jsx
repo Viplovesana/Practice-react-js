@@ -310,16 +310,25 @@ import { BiColor } from "react-icons/bi"
 //     )
 // }
 // export default App;
-import { useSelector,useDispatch } from "react-redux";
+import { useSelector, useDispatch} from "react-redux";
 import { changeColor } from "./colorSlice";
+import { useState } from "react";
 const App =()=>{
-    const usecolor=useSelector(state=>state.mycolor.color);
-    const dispatch=useDispatch()
+    const clr =useSelector(state=>state.mycolor.color)
+    const dispatch=useDispatch();
+    const [txtval,setTxtval]=useState("")
+ 
     return(
         <>
-        <div style={{width:"200px",height:"100px", border:"2px solid black" ,backgroundColor:usecolor}}>{usecolor}</div>
-        <button onClick={()=>{dispatch(changeColor())}}>click here !</button>
+        <h1>Werlcome!</h1>
+        Enter color <input type="text"  value={txtval} 
+        onChange={(e)=>{setTxtval(e.target.value)}}/>
+        <button onClick={()=>{dispatch(changeColor(txtval))}}>Change color</button>
+        <div style={{width:"300px",height:"300px" ,backgroundColor:clr}}>
+
+        </div>
         </>
+        
     )
 }
 export default App;
