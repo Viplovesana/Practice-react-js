@@ -308,15 +308,17 @@
 //     )
 // }
 // export default App;
+import { useSelector,useDispatch } from "react-redux";
+import { changeName } from "./nameSlice";
 
-import Color from "./color";
 const App=()=>{
+    const usrname=useSelector(state=>state.myname.user);
+    const dispatch=useDispatch();
+
     return(
         <>
-        <h1>Welcome !</h1>
-        <Color/>
-        
-        
+        <h1>my counter app :{usrname}</h1>
+        <button onClick={()=>{dispatch(changeName())}}>Click here </button>   
         </>
     )
 }
