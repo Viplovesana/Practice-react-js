@@ -9,6 +9,8 @@
 // import Search from "./pages/search";
 // import MyEdit from "./pages/MyEdit";
 
+import { BiColor } from "react-icons/bi"
+
 
 
 
@@ -309,17 +311,16 @@
 // }
 // export default App;
 import { useSelector,useDispatch } from "react-redux";
-import { changeName } from "./nameSlice";
-
-const App=()=>{
-    const usrname=useSelector(state=>state.myname.user);
-    const dispatch=useDispatch();
-
+import { changeColor } from "./colorSlice";
+const App =()=>{
+    const usecolor=useSelector(state=>state.mycolor.color);
+    const dispatch=useDispatch()
     return(
         <>
-        <h1>my counter app :{usrname}</h1>
-        <button onClick={()=>{dispatch(changeName())}}>Click here </button>   
+        <div style={{width:"200px",height:"100px", border:"2px solid black" ,backgroundColor:usecolor}}>{usecolor}</div>
+        <button onClick={()=>{dispatch(changeColor())}}>click here !</button>
         </>
     )
 }
 export default App;
+

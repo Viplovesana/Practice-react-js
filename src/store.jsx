@@ -1,13 +1,10 @@
-
-import { configureStore } from "@reduxjs/toolkit";
-import nameReducer from "./nameSlice";
-
-
-
-const store=configureStore({
+ import { configureStore } from "@reduxjs/toolkit";
+ import viplove from "./colorSlice"
+ const Store=configureStore({
     reducer:{
-        myname:nameReducer
-
+        mycolor:viplove
     }
-});
-export default store;
+  
+
+ })
+ export default Store;
