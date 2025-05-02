@@ -1,10 +1,9 @@
- import { configureStore } from "@reduxjs/toolkit";
- import viplove from "./colorSlice"
- const Store=configureStore({
+import { configureStore } from "@reduxjs/toolkit";
+import todoReducer from "./todoSlice";
+const store = configureStore({
     reducer:{
-        mycolor:viplove
+        todo:todoReducer
     }
-  
+})
 
- })
- export default Store;
+export default store;
